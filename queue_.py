@@ -5,7 +5,7 @@ import threading
 from time import sleep
 from typing import Any
 
-def time(): return str(datetime.now().time())[6:12]
+time = lambda: str(datetime.now().time())[6:12]
 
 class Pipeline(Queue):
     def __init__(self, maxsize: int=10) -> None:
